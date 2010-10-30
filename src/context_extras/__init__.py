@@ -34,4 +34,25 @@ def get_version():
     return version
 
 
+long_description = """
+Introducing django-context-extras
+=================================
+This is a fairly simple Django application that provides some extra context
+processors which are often needed by many other Django applications.
 
+Currently, two extra context processors are available:
+
+*current_site*
+  Adds the current ``site`` instance to the template context.
+*project_settings*
+  Adds the project's ``settings`` object to the template context, so you can
+  access the project settings from within the templates.
+
+More information about the installation, configuration and usage of this app
+can be found in the **README** file inside the distribution package or in the
+project's `wiki <http://www.codetrax.org/projects/django-context-extras/wiki>`_.
+
+Spotted a bug or have a feature request? Feel free to file a report at the
+project's `issue tracker <http://www.codetrax.org/projects/django-context-extras/issues>`_.
+
+"""
