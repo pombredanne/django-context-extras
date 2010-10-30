@@ -35,8 +35,6 @@ def get_version():
 
 
 long_description = """
-Introducing django-context-extras
-=================================
 This is a fairly simple Django application that provides some extra context
 processors which are often needed by many other Django applications.
 
