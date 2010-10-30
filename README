@@ -4,7 +4,7 @@ django-context-extras README
 django-context-extras is a simple Django app that provides some extra
 context processors for your Django based projects.
 
-Development Web Site:
+Development Web Site and Issue Tracker:
   - http://www.codetrax.org/projects/django-context-extras
 
 Public Source Code Repository:
