@@ -53,7 +53,7 @@ sys.path.append(os.path.abspath('src'))
 
 from setuptools import setup, find_packages
 
-from context_extras import get_version 
+from context_extras import get_version, long_description
 
 
 if __name__=='__main__':
@@ -66,7 +66,7 @@ if __name__=='__main__':
         maintainer_email = 'gnot@g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-context-extras',
         description = 'django-context-extras provides some extra context processors for Django projects.',
-        long_description = 'django-context-extras provides some extra context processors for Django projects.',
+        long_description = long_description,
         download_url = 'https://source.codetrax.org/hgroot/django-context-extras',
         classifiers = [
             'Development Status :: 4 - Beta',
