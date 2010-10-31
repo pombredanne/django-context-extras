@@ -51,7 +51,7 @@ import sys
 import os
 sys.path.append(os.path.abspath('src'))
 
-from setuptools import setup, find_packages
+from distutils.core import setup
 
 from context_extras import get_version, long_description
 
@@ -82,7 +82,6 @@ if __name__=='__main__':
         ],
         license = 'Apache License version 2',
         package_dir = {'': 'src'},
-        packages = find_packages(),
-        include_package_data = True,
+        packages = ['context_extras'],
     )
 
