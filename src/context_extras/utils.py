@@ -26,23 +26,22 @@
 #
 
 from context_extras import settings
-from context_extras.utils import get_formatted_headers
 
 
-class ReverseProxyHttpsHeadersMiddleware:
+def get_formatted_headers():
+    """
+    This function returns a list that contains the same headers as the
+    REVERSE_PROXY_HTTPS_HEADERS setting. Several transformations have been
+    applied to the headers so as to be in the format which is used in the
+    Django request object.
     
-    def process_request(self, request):
-        """
-        All headers must match
-        All header values must match
-        """
-        if not settings.REVERSE_PROXY_HTTPS_HEADERS:
-            return
-        https_headers = get_formatted_headers(settings.REVERSE_PROXY_HTTPS_HEADERS)
-        for header_name, header_value in https_headers:
-            if header_name not in request.META:
-                return
-            elif request.META[header_name].lower() != header_value:
-                return
-        request.META['HTTPS'] = 'on'
-
+    For instance:
+    
+        X-Forwarded-Ssl  -->  HTTP_X_FORWARDED_SSL
+    
+    """
+    headers = []
+    for header_name, header_value in settings.REVERSE_PROXY_HTTPS_HEADERS:
+        header_name = header_name.replace('-', '_')
+        headers.append(('HTTP_%s' % header_name.strip().upper()), header_value.lower())
+    return headers

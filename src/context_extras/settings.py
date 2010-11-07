@@ -40,4 +40,11 @@ from django.conf import settings
 REVERSE_PROXY_HTTPS_HEADERS = getattr(settings, 'REVERSE_PROXY_HTTPS_HEADERS', ())
 
 # List of URLs that should be redirected to the HTTPS version of the resource 
-SSL_REQUIRED_URLS = getattr(settings, 'SSL_REQUIRED_URLS', [])
+SSL_REQUIRE_URLS = getattr(settings, 'SSL_REQUIRED_URLS', [])
+
+# If set to True and a URL that matches a URL of the SSL_REQUIRE_URLS list,
+# then, in case the URL is accessed over HTTP, it is redirected to the HTTPS
+# version. If it set to False, the client in the same occasion is forbidden
+# access.
+SSL_REQUIRE_REDIRECT = getattr(settings, 'SSL_REQUIRE_REDIRECT', True)
+
