@@ -3,17 +3,15 @@
 #
 #  This file is part of django-context-extras.
 #
-#  django-context-extras provides some extra context processors for Django
-#  projects.
+#  django-context-extras provides some extra context processors and
+#  middleware classes that are often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-context-extras
+#  Public Source Code Repository:
+#    - https://source.codetrax.org/hgroot/django-context-extras
 #
-#  Sponsored by:
-#    - http://www.g-loaded.eu/
-#    - http://www.codetrax.org/
-#
-#  Copyright (c) 2010 George Notaras <gnot@g-loaded.eu>
+#  Copyright 2010 George Notaras <gnot [at] g-loaded.eu>
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -51,21 +49,21 @@ import sys
 import os
 sys.path.append(os.path.abspath('src'))
 
-from distutils.core import setup
+from setuptools import setup
 
 from context_extras import get_version, long_description
-
 
 if __name__=='__main__':
     setup(
         name = 'django-context-extras',
         version = get_version(),
+        license = 'Apache License version 2',
         author = 'George Notaras',
-        author_email = 'gnot@g-loaded.eu',
+        author_email = 'gnot [at] g-loaded.eu',
         maintainer = 'George Notaras',
-        maintainer_email = 'gnot@g-loaded.eu',
+        maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-context-extras',
-        description = 'django-context-extras provides some extra context processors for Django projects.',
+        description = 'django-context-extras provides some extra context processors and middleware classes that are often needed by Django projects.',
         long_description = long_description,
         download_url = 'https://source.codetrax.org/hgroot/django-context-extras',
         classifiers = [
@@ -77,11 +75,13 @@ if __name__=='__main__':
             'Natural Language :: English',
             'Operating System :: OS Independent',
             'Programming Language :: Python',
+            'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
             'Topic :: Software Development :: Libraries :: Application Frameworks',
             'Topic :: Software Development :: Libraries :: Python Modules',
         ],
-        license = 'Apache License version 2',
         package_dir = {'': 'src'},
         packages = ['context_extras'],
+        include_package_data = True,
+        #zip_safe = False,
     )
 

@@ -2,17 +2,15 @@
 #
 #  This file is part of django-context-extras.
 #
-#  django-context-extras provides some extra context processors for Django
-#  projects.
+#  django-context-extras provides some extra context processors and
+#  middleware classes that are often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-context-extras
+#  Public Source Code Repository:
+#    - https://source.codetrax.org/hgroot/django-context-extras
 #
-#  Sponsored by:
-#    - http://www.g-loaded.eu/
-#    - http://www.codetrax.org/
-#
-#  Copyright (c) 2010 George Notaras <gnot@g-loaded.eu>
+#  Copyright 2010 George Notaras <gnot [at] g-loaded.eu>
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -26,3 +24,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #
+
+from django.db import models
+from django.db.models import signals
