@@ -3,6 +3,7 @@ django-context-extras Help
 This file contains detailed information on how to configure and use
 ``django-context-extras``.
 
+
 How to read this document
 =========================
 This document is written in ``reStructuredText`` (*rst*). Although
@@ -26,46 +27,51 @@ perform the conversion::
 Then use any web browser to view the exported ``help.html`` file.
 
 
-
 Installation
 ============
 
-Add it to the INSTALLED_APPS in settings.py:
 
-INSTALLED_APPS = (
-    ...
-    'context_extras',
-)
 
 
 Configuration
 =============
+This section contains instructions about how to configure this application.
+If you haven't installed it yet, please go through the INSTALL document
+before proceeding any further.
 
-django-context-extras requires no configuration. However, in order to use the
+Although django-context-extras contains no models it is suggested that you
+add it the INSTALLED_APPS list inside your project's ``settings.py``::
+
+    INSTALLED_APPS = (
+        ...
+        'context_extras',
+    )
+
+``django-context-extras`` requires no configuration. However, in order to use the
 provided context processors it is required that you add them to the list of
 the context processors your project uses.
 
-Django, by default, uses the following context processors:
+Django, by default, uses the following context processors::
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.contrib.messages.context_processors.messages"
-)
+    TEMPLATE_CONTEXT_PROCESSORS = (
+        "django.contrib.auth.context_processors.auth",
+        "django.core.context_processors.debug",
+        "django.core.context_processors.i18n",
+        "django.core.context_processors.media",
+        "django.contrib.messages.context_processors.messages"
+    )
 
 See: http://docs.djangoproject.com/en/1.2/ref/settings/#template-context-processors
 
-The context processors provided by django-context-extras are:
+The context processors provided by ``django-context-extras`` are:
 
 1. current_site context processor
-------------------------------
-Adds the current "site" object to the template context.
+---------------------------------
+Adds the current **site** object to the template context.
 
-To add the 'current_site' context processor to your project, add the
-'context_extras.context_processors.current_site' module in the
-TEMPLATE_CONTEXT_PROCESSORS setting in your settings.py file
+To add the *current_site* context processor to your project, add the
+``context_extras.context_processors.current_site`` module in the
+``TEMPLATE_CONTEXT_PROCESSORS`` setting in your ``settings.py`` file::
 
     TEMPLATE_CONTEXT_PROCESSORS = (
         ...
@@ -74,12 +80,12 @@ TEMPLATE_CONTEXT_PROCESSORS setting in your settings.py file
     )
 
 2. project_settings context processor
-----------------------------------
-Adds the project's "settings" object to the template context.
+-------------------------------------
+Adds the project's **settings** object to the template context.
 
-To add the 'project_settings' context processor to your project, add the
-'context_extras.context_processors.project_settings' module in the
-TEMPLATE_CONTEXT_PROCESSORS setting in your settings.py file
+To add the *project_settings* context processor to your project, add the
+``context_extras.context_processors.project_settings`` module in the
+``TEMPLATE_CONTEXT_PROCESSORS`` setting in your ``settings.py`` file::
 
     TEMPLATE_CONTEXT_PROCESSORS = (
         ...
