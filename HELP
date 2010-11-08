@@ -4,29 +4,6 @@ This file contains detailed information on how to configure and use
 ``django-context-extras``.
 
 
-How to read this document
-=========================
-This document is written in ``reStructuredText`` (*rst*). Although
-reStructuredText is an easy-to-read plain text markup format, it is
-recommended to convert it to *HTML* for a better reading experience.
-
-In order to convert this document to *HTML* you need ``docutils``, which
-you can install in your system using ``pip``::
-
-    pip install docutils
-
-Or ``easy_install``::
-
-    easy_install docutils
-
-Once ``docutils`` is installed, you can use the ``rst2html.py`` utility to
-perform the conversion::
-
-    rst2html.py HELP help.html
-
-Then use any web browser to view the exported ``help.html`` file.
-
-
 Configuration
 =============
 This section contains instructions about how to configure this application.
@@ -40,6 +17,7 @@ adding it to the ``INSTALLED_APPS`` in your project's ``settings.py`` file::
         ...
         'context_extras',
     )
+
 
 Context Processors
 ==================
