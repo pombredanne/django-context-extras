@@ -2,8 +2,8 @@
 #
 #  This file is part of django-context-extras.
 #
-#  django-context-extras provides some extra context processors and
-#  middleware classes that are often needed by Django projects.
+#  django-context-extras provides some extra context processors that are
+#  often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-context-extras

@@ -2,8 +2,8 @@
 #
 #  This file is part of django-context-extras.
 #
-#  django-context-extras provides some extra context processors and
-#  middleware classes that are often needed by Django projects.
+#  django-context-extras provides some extra context processors that are
+#  often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-context-extras
@@ -24,3 +24,34 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #
+
+
+VERSION = (0, 1, 2, 'final', 0)
+
+def get_version():
+    version = '%d.%d.%d' % (VERSION[0], VERSION[1], VERSION[2])
+    return version
+
+
+long_description = """
+This is a fairly simple Django application that provides some extra context
+processors which are often needed by many other Django applications.
+
+This application currently provides two extra context processors:
+
+*current_site*
+  Adds the current ``site`` instance to the template context.
+*project_settings*
+  Adds the project's ``settings`` object to the template context, so you can
+  access the project settings from within the templates.
+
+More information about the installation, configuration and usage of this
+application can be found in the *HELP* file inside the distribution package
+or in the project's
+`wiki <http://www.codetrax.org/projects/django-context-extras/wiki>`_.
+
+In case you run into any problems while using this application it is highly
+recommended you file a report at the project's
+`issue tracker <http://www.codetrax.org/projects/django-context-extras/issues>`_.
+
+"""
