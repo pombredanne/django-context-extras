@@ -27,8 +27,8 @@ __ http://docs.djangoproject.com/en/dev/ref/settings/#template-context-processor
 The context processors provided by ``django-context-extras`` are:
 
 
-current_site context processor
-------------------------------
+*current_site* context processor
+--------------------------------
 
 Adds the current **site** object to the template context.
 
@@ -43,8 +43,8 @@ To add the *current_site* context processor to your project, add the
     )
 
 
-project_settings context processor
-----------------------------------
+*project_settings* context processor
+------------------------------------
 
 Adds the project's **settings** object to the template context.
 
