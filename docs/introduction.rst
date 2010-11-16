@@ -6,7 +6,7 @@ Introduction
 This section contains an introduction to *django-context-extras*, including general
 information about how to submit bug reports and make feature requests.
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-context-extras provides some extra context processors that are often needed by Django projects.
 
 Licensed under the *Apache License version 2.0*. More licensing information
 exists in the license_ section.
@@ -15,8 +15,13 @@ exists in the license_ section.
 Features
 ========
 
-- Feature A
-- Feature B
+This application currently provides two extra context processors:
+
+*current_site*
+    Adds the current ``site`` instance to the template context.
+*project_settings*
+    Adds the project's ``settings`` object to the template context, so you can
+    access the project settings from within the templates.
 
 
 Documentation

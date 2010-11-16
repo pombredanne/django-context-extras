@@ -17,7 +17,7 @@ Welcome to the *django-context-extras*'s documentation!
 About this project
 ==================
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-context-extras provides some extra context processors that are often needed by Django projects.
 
 | **Author**: `George Notaras <http://www.g-loaded.eu/>`_
 | **Development Web Site**: `django-context-extras project <http://www.codetrax.org/projects/django-context-extras>`_
