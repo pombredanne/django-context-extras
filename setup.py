@@ -3,8 +3,7 @@
 #
 #  This file is part of django-context-extras.
 #
-#  django-context-extras provides some extra context processors that are
-#  often needed by Django projects.
+#  django-context-extras provides some extra context processors that are often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-context-extras
@@ -51,7 +50,11 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from setuptools import setup
 
-from context_extras import get_version, long_description
+from context_extras import get_version
+
+def read(fname):
+    """Utility function to read the README file."""
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 if __name__=='__main__':
     setup(
@@ -64,8 +67,9 @@ if __name__=='__main__':
         maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-context-extras',
         description = 'django-context-extras provides some extra context processors that are often needed by Django projects.',
-        long_description = long_description,
+        long_description = read('README'),
         download_url = 'https://source.codetrax.org/hgroot/django-context-extras',
+        platforms=['any'],
         classifiers = [
             'Development Status :: 4 - Beta',
             'Environment :: Web Environment',
