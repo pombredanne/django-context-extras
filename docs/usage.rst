@@ -58,3 +58,20 @@ To add the *project_settings* context processor to your project, add the
         ...
     )
 
+
+*protocol_host* context processor
+---------------------------------
+
+Adds the ``PROTOHOST`` variable to the template context. The variable contains
+the complete URL to the host, for example: ``http://example.org:8080``
+
+To add the *protocol_host* context processor to your project, add the
+``context_extras.context_processors.protocol_host`` module in the
+``TEMPLATE_CONTEXT_PROCESSORS`` setting in your ``settings.py`` file::
+
+    TEMPLATE_CONTEXT_PROCESSORS = (
+        ...
+        'context_extras.context_processors.protocol_host',
+        ...
+    )
+

@@ -74,3 +74,25 @@ def project_settings(request):
     }
 
 
+def protocol_host(request):
+    """A context processor to add a context variable containing the protocol
+    and the host.
+    
+    To add the 'protocol_host' context processor to your project, add the
+    'context_extras.context_processors.protocol_host' module in the
+    TEMPLATE_CONTEXT_PROCESSORS setting in your settings.py file
+    
+    TEMPLATE_CONTEXT_PROCESSORS = (
+        ...
+        'context_extras.context_processors.protocol_host',
+        ...
+    )
+    
+    """
+    proto = 'http'
+    if request.is_secure():
+        proto = 'https'
+    return {
+        'PROTOHOST': '%s://%s' % (proto, request.get_host()),
+    }
+
