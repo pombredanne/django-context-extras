@@ -24,9 +24,9 @@ This application currently provides two extra context processors:
     Adds the project's ``settings`` object to the template context, so you can
     access the project settings from within the templates.
 *protocol_host*
-    Adds the ``PROTOHOST`` variable to the template context. The variable contains
-    the complete URL to the host, for example: ``http://example.org:8080``
-
+    Adds the ``PROTOHOST`` and ``FORCESECUREPROTOHOST`` variable to the template
+    context. The variables contain the complete URL to the host, for example:
+    ``http://example.org:8080``
 
 Documentation
 =============
